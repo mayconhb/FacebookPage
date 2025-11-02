@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    let likesCount = 23000;
+    let likesCount = 31;
     let userLiked = false;
 
     likeBtn.addEventListener('click', function() {
         likeBtn.classList.toggle('active');
         userLiked = !userLiked;
         
-        const statsNumber = document.querySelector('.engagement-stats .stat-item:first-child .stat-number');
+        const reactionsNumber = document.querySelector('.reactions-number');
         
         if (userLiked) {
             likesCount += 1;
@@ -57,9 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             likesCount -= 1;
         }
         
-        const likesInK = likesCount / 1000;
-        const formattedLikes = likesInK % 1 === 0 ? likesInK.toFixed(0) : likesInK.toFixed(3).replace(/\.?0+$/, '');
-        statsNumber.textContent = formattedLikes;
+        reactionsNumber.textContent = likesCount;
     });
 
     commentBtn.addEventListener('click', function() {
