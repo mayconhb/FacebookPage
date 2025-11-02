@@ -131,4 +131,25 @@ document.addEventListener('DOMContentLoaded', function() {
             showPopup('You need to finish watching the video before visiting the profile.');
         });
     }
+
+    const authorAvatar = document.querySelector('.author-avatar-img');
+    if (authorAvatar) {
+        authorAvatar.addEventListener('click', function() {
+            showPopup('You need to finish watching the video before visiting the profile.');
+        });
+    }
+
+    const commentAvatars = document.querySelectorAll('.comment-avatar');
+    commentAvatars.forEach(avatar => {
+        avatar.addEventListener('click', function() {
+            showPopup('You need to finish watching the video before visiting the profile.');
+        });
+    });
+
+    const commentAuthors = document.querySelectorAll('.comment-author');
+    commentAuthors.forEach(author => {
+        author.addEventListener('click', function() {
+            showPopup('You need to finish watching the video before visiting the profile.');
+        });
+    });
 });
