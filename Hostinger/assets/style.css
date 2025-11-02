@@ -500,6 +500,12 @@ body {
     flex-shrink: 0;
 }
 
+.comment-likes img {
+    flex-shrink: 0;
+    height: 14px;
+    width: auto;
+}
+
 .custom-popup {
     position: fixed;
     top: 0;
