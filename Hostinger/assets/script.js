@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoOverlay = document.getElementById('videoOverlay');
     const progressBar = document.querySelector('.progress-bar');
     const likeBtn = document.getElementById('likeBtn');
-    const commentBtn = document.getElementById('commentBtn');
-    const shareBtn = document.getElementById('shareBtn');
 
     videoOverlay.addEventListener('click', function() {
         if (video.paused) {
@@ -58,30 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         reactionsNumber.textContent = likesCount;
-    });
-
-    commentBtn.addEventListener('click', function() {
-        const commentsSection = document.querySelector('.comments-section');
-        commentsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-    shareBtn.addEventListener('click', function() {
-        if (navigator.share) {
-            navigator.share({
-                title: 'The Scientific Discovery That Is Shocking Doctors and Women',
-                text: 'Check out this incredible discovery!',
-                url: window.location.href
-            }).catch(err => {
-                console.log('Error sharing:', err);
-            });
-        } else {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                alert('Link copied to clipboard!');
-            }).catch(err => {
-                console.error('Error copying:', err);
-            });
-        }
     });
 
     const commentActions = document.querySelectorAll('.comment-action');
