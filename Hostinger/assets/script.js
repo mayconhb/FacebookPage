@@ -124,4 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    const authorName = document.querySelector('.author-name');
+    if (authorName) {
+        authorName.addEventListener('click', function() {
+            showPopup('You need to finish watching the video before visiting the profile.');
+        });
+    }
 });
