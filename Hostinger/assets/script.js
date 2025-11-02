@@ -68,25 +68,25 @@ document.addEventListener('DOMContentLoaded', function() {
     shareBtn.addEventListener('click', function() {
         if (navigator.share) {
             navigator.share({
-                title: 'A Descoberta Científica que Está Chocando Médicos e Mulheres',
-                text: 'Confira essa descoberta incrível!',
+                title: 'The Scientific Discovery That Is Shocking Doctors and Women',
+                text: 'Check out this incredible discovery!',
                 url: window.location.href
             }).catch(err => {
-                console.log('Erro ao compartilhar:', err);
+                console.log('Error sharing:', err);
             });
         } else {
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
-                alert('Link copiado para a área de transferência!');
+                alert('Link copied to clipboard!');
             }).catch(err => {
-                console.error('Erro ao copiar:', err);
+                console.error('Error copying:', err);
             });
         }
     });
 
     const commentActions = document.querySelectorAll('.comment-action');
     commentActions.forEach(action => {
-        if (action.textContent === 'Curtir') {
+        if (action.textContent === 'Like') {
             action.addEventListener('click', function() {
                 action.style.color = action.style.color === 'rgb(24, 119, 242)' ? '' : '#1877f2';
                 action.style.fontWeight = action.style.fontWeight === '700' ? '600' : '700';
