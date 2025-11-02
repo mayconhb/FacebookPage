@@ -40,8 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    let likesCount = 31;
+    let likesCount = 12700;
     let userLiked = false;
+
+    function formatNumber(num) {
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1) + 'K';
+        }
+        return num.toString();
+    }
 
     likeBtn.addEventListener('click', function() {
         likeBtn.classList.toggle('active');
@@ -55,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             likesCount -= 1;
         }
         
-        reactionsNumber.textContent = likesCount;
+        reactionsNumber.textContent = formatNumber(likesCount);
     });
 
     function showPopup(message) {
