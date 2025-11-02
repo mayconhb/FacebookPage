@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Descoberta Científica que Está Chocando Médicos e Mulheres</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="post-card">
+            <div class="video-container">
+                <div class="video-placeholder"></div>
+                <video id="mainVideo" class="video-player">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                    <div class="play-button">
+                        <svg class="volume-icon" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                        </svg>
+                        <span class="play-text">Seu vídeo já começou!<br>Clique para ouvir</span>
+                    </div>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="post-content">
+                <h1 class="post-title">A Descoberta Científica que Está Chocando Médicos e Mulheres...</h1>
+                
+                <div class="engagement-stats">
+                    <div class="stat-item">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="#1877f2">
+                            <circle cx="12" cy="12" r="11" fill="#1877f2"/>
+                            <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="stat-number">23</span>
+                        <span class="stat-label">mil</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8742</span>
+                        <span class="stat-label">comentários</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,2</span>
+                        <span class="stat-label">mil compartilhamentos</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="action-btn" id="likeBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
+                        </svg>
+                        <span>Curtir</span>
+                    </button>
+                    <button class="action-btn" id="commentBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/>
+                        </svg>
+                        <span>Comentar</span>
+                    </button>
+                    <button class="action-btn" id="shareBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        <span>Compartilhar</span>
+                    </button>
+                </div>
+
+                <div class="comments-section">
+                    <h2 class="comments-title">Comentários</h2>
+                    
+                    <div class="comment">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">MS</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Maria Silva</span>
+                            </div>
+                            <p class="comment-text">Comecei há 3 semanas e já perdi 6kg! Incrível!!! Estou muito feliz com os resultados!</p>
+                            <div class="comment-footer">
+                                <span class="comment-time">há 2 horas</span>
+                                <button class="comment-action">Curtir</button>
+                                <button class="comment-action">Responder</button>
+                                <div class="comment-likes">
+                                    <svg viewBox="0 0 24 24" fill="#1877f2" width="14" height="14">
+                                        <circle cx="12" cy="12" r="11" fill="#1877f2"/>
+                                        <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>2,3 mil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">AC</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Ana Costa</span>
+                            </div>
+                            <p class="comment-text">Muita mãe está fazendo e os resultados são incríveis. Ela já perdeu 12kg em 1 mês!</p>
+                            <div class="comment-footer">
+                                <span class="comment-time">há 5 horas</span>
+                                <button class="comment-action">Curtir</button>
+                                <button class="comment-action">Responder</button>
+                                <div class="comment-likes">
+                                    <svg viewBox="0 0 24 24" fill="#1877f2" width="14" height="14">
+                                        <circle cx="12" cy="12" r="11" fill="#1877f2"/>
+                                        <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>1,8 mil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">JS</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Juliana Santos</span>
+                            </div>
+                            <p class="comment-text">Melhor vídeo que vi sobre emagrecimento! Finalmente algo que realmente funciona!</p>
+                            <div class="comment-footer">
+                                <span class="comment-time">há 1 dia</span>
+                                <button class="comment-action">Curtir</button>
+                                <button class="comment-action">Responder</button>
+                                <div class="comment-likes">
+                                    <svg viewBox="0 0 24 24" fill="#1877f2" width="14" height="14">
+                                        <circle cx="12" cy="12" r="11" fill="#1877f2"/>
+                                        <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>3,1 mil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">CM</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Carla Mendes</span>
+                            </div>
+                            <p class="comment-text">Estou na segunda semana e já notei diferença na barriga. Obrigada por compartilhar!</p>
+                            <div class="comment-footer">
+                                <span class="comment-time">há 1 dia</span>
+                                <button class="comment-action">Curtir</button>
+                                <button class="comment-action">Responder</button>
+                                <div class="comment-likes">
+                                    <svg viewBox="0 0 24 24" fill="#1877f2" width="14" height="14">
+                                        <circle cx="12" cy="12" r="11" fill="#1877f2"/>
+                                        <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>987</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-avatar" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">PL</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Patricia Lima</span>
+                            </div>
+                            <p class="comment-text">Compartilhei com todas as minhas amigas! Isso precisa ser divulgado!</p>
+                            <div class="comment-footer">
+                                <span class="comment-time">há 2 dias</span>
+                                <button class="comment-action">Curtir</button>
+                                <button class="comment-action">Responder</button>
+                                <div class="comment-likes">
+                                    <svg viewBox="0 0 24 24" fill="#1877f2" width="14" height="14">
+                                        <circle cx="12" cy="12" r="11" fill="#1877f2"/>
+                                        <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>1,2 mil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-copyright">© 2024 Truque da Sai Rosa. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Política de Privacidade</a>
+                <span class="footer-separator">•</span>
+                <a href="#" class="footer-link">Termos de Serviço</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
