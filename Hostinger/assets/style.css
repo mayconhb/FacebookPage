@@ -482,6 +482,10 @@ body {
         padding: 0;
     }
 
+    .fb-header {
+        padding: 4px 16px;
+    }
+
     .post-card {
         border-radius: 0;
     }
