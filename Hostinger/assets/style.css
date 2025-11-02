@@ -206,9 +206,14 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
     background-color: #000;
     overflow: hidden;
+}
+
+.video-container vturb-smartplayer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .video-placeholder {
