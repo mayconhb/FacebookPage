@@ -13,6 +13,13 @@ Hostinger/
 ```
 
 ## Características Principais
+- **Header do Facebook**: Logo branco do Facebook em fundo azul (#1877f2) fixo no topo
+- **Informações do Post**: 
+  - Avatar circular com iniciais "MM"
+  - Nome "Mallik Mirzaie" com botão "Seguir" em azul
+  - Data "13 de out." com ícone de privacidade (globo)
+  - Botões de menu (três pontos) e fechar (X)
+- **Texto do Post**: "99% Failed this mission" em fonte grande
 - **Card de Vídeo**: Player de vídeo com overlay rosa e botão de play com texto "Seu vídeo já começou! Clique para ouvir"
 - **Título**: "A Descoberta Científica que Está Chocando Médicos e Mulheres..."
 - **Métricas de Engajamento**: 23 mil curtidas, 8742 comentários, 1,2 mil compartilhamentos
@@ -58,3 +65,6 @@ Para fazer upload na Hostinger:
 - [02/11/2025] Adição de placeholder visual para o vídeo com gradiente
 - [02/11/2025] Correção de z-index para garantir visibilidade dos elementos
 - [02/11/2025] Correção da funcionalidade do botão Curtir para exibir incremento visível no contador (23 → 23.001)
+- [02/11/2025] Adição de header do Facebook com logo e informações do post (Mallik Mirzaie)
+- [02/11/2025] Implementação de texto do post "99% Failed this mission"
+- [02/11/2025] Adição de botões de menu e fechar no cabeçalho
