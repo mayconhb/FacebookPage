@@ -1,44 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('mainVideo');
-    const videoOverlay = document.getElementById('videoOverlay');
-    const progressBar = document.querySelector('.progress-bar');
+    // O vídeo agora é gerenciado pelo Vturb player
     const likeBtn = document.getElementById('likeBtn');
-
-    videoOverlay.addEventListener('click', function() {
-        if (video.paused) {
-            video.play();
-            video.muted = false;
-            videoOverlay.classList.add('hidden');
-        }
-    });
-
-    video.addEventListener('play', function() {
-        videoOverlay.classList.add('hidden');
-    });
-
-    video.addEventListener('pause', function() {
-        videoOverlay.classList.remove('hidden');
-    });
-
-    video.addEventListener('timeupdate', function() {
-        const progress = (video.currentTime / video.duration) * 100;
-        progressBar.style.width = progress + '%';
-    });
-
-    video.addEventListener('ended', function() {
-        progressBar.style.width = '100%';
-        videoOverlay.classList.remove('hidden');
-    });
-
-    video.addEventListener('click', function() {
-        if (video.paused) {
-            video.play();
-            videoOverlay.classList.add('hidden');
-        } else {
-            video.pause();
-            videoOverlay.classList.remove('hidden');
-        }
-    });
 
     let likesCount = 12700;
     let userLiked = false;
@@ -98,11 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const shareBtn = document.getElementById('shareBtn');
     shareBtn.addEventListener('click', function() {
-        if (video.ended) {
-            showPopup('Share functionality coming soon!');
-        } else {
-            showPopup('You need to finish watching the video before sharing.');
-        }
+        showPopup('You need to finish watching the video before sharing.');
     });
 
     const commentBtn = document.getElementById('commentBtn');
