@@ -72,6 +72,14 @@ body {
     flex-shrink: 0;
 }
 
+.author-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
 .online-status {
     position: absolute;
     bottom: 0;
