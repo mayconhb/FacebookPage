@@ -500,51 +500,55 @@ body {
     flex-shrink: 0;
 }
 
-.new-comment-area,
-.reply-input-area {
-    margin-bottom: 16px;
-}
-
-.new-comment-wrapper {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.new-comment-input-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.new-comment-input,
-.reply-input {
+.custom-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 60px;
-    padding: 8px 12px;
-    border: 1px solid #ccd0d5;
-    border-radius: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    resize: vertical;
-    background: #f0f2f5;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
 
-.new-comment-input:focus,
-.reply-input:focus {
-    outline: none;
-    border-color: #1877f2;
-    background: #fff;
+.custom-popup.show {
+    display: flex;
 }
 
-.post-comment-btn,
-.post-reply-btn {
-    align-self: flex-end;
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+    position: relative;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 10000;
+}
+
+.popup-message {
+    font-size: 16px;
+    color: #050505;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.popup-close-btn {
     background: #1877f2;
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 10px 32px;
     border-radius: 6px;
     font-size: 15px;
     font-weight: 600;
@@ -552,18 +556,8 @@ body {
     transition: background-color 0.2s ease;
 }
 
-.post-comment-btn:hover,
-.post-reply-btn:hover {
+.popup-close-btn:hover {
     background: #166fe5;
-}
-
-.replies-container {
-    margin-left: 46px;
-    margin-top: 8px;
-}
-
-.reply-comment {
-    margin-bottom: 12px;
 }
 
 .footer {
