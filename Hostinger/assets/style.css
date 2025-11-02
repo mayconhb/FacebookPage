@@ -556,10 +556,6 @@ body {
 }
 
 @media (max-width: 400px) {
-    .action-btn span {
-        display: none;
-    }
-
     .engagement-stats {
         font-size: 12px;
     }
