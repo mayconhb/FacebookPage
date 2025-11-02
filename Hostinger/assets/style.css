@@ -84,6 +84,12 @@ body {
     color: #050505;
 }
 
+.verified-badge {
+    flex-shrink: 0;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
 .follow-separator {
     color: #65676b;
     font-size: 15px;
