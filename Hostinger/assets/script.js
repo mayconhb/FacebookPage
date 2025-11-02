@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const postDate = document.getElementById('postDate');
-    const now = new Date();
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const formattedDate = monthNames[now.getMonth()] + " " + now.getDate();
-    postDate.textContent = formattedDate;
-
     const video = document.getElementById('mainVideo');
     const videoOverlay = document.getElementById('videoOverlay');
     const progressBar = document.querySelector('.progress-bar');
