@@ -334,6 +334,11 @@ body {
     align-items: center;
 }
 
+.reaction-icons-img {
+    height: 20px;
+    width: auto;
+}
+
 .reaction-icon {
     flex-shrink: 0;
 }
