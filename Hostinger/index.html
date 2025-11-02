@@ -208,7 +208,8 @@
     <!-- Script do Vturb - Trocar os IDs quando mudar o vídeo -->
     <script type="text/javascript">
         var s=document.createElement("script");
-        s.src="https://scripts.converteai.net/bab2fc8f-ef03-4202-ae7b-2152b5f34ed0/players/68fdd186d4cc9d4913d24d18/v4/player.js";
+        // Adiciona timestamp para evitar cache
+        s.src="https://scripts.converteai.net/bab2fc8f-ef03-4202-ae7b-2152b5f34ed0/players/68fdd186d4cc9d4913d24d18/v4/player.js?t=" + Date.now();
         s.async=!0;
         document.head.appendChild(s);
     </script>
