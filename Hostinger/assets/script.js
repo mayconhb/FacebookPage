@@ -4,8 +4,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const offersSection = document.querySelector('.offers-section');
     let pitchButtonDetected = false;
 
+    // Garantir que a seção de ofertas comece sempre oculta
+    if (offersSection) {
+        offersSection.classList.remove('visible');
+    }
+
+    // Variável para controlar quando começar a verificar o botão pitch
+    let canCheckPitch = false;
+    
+    // Aguarda um tempo antes de permitir a detecção do botão pitch
+    // Isso garante que a seção não apareça imediatamente ao carregar a página
+    setTimeout(function() {
+        canCheckPitch = true;
+    }, 3000); // Aguarda 3 segundos após o carregamento da página
+
     // Função para verificar se o botão "pitch" do vturb apareceu
     function checkForPitchButton() {
+        // Só verifica se já passou o tempo mínimo
+        if (!canCheckPitch) {
+            return false;
+        }
+        
         // Procura por botões que contenham o texto "pitch" (case insensitive)
         const allButtons = document.querySelectorAll('button, a, div[role="button"]');
         
