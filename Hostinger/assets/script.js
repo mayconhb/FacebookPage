@@ -9,30 +9,36 @@ document.addEventListener('DOMContentLoaded', function() {
         offersSection.classList.remove('visible');
     }
 
-    // Variável para controlar quando começar a verificar o botão pitch
-    let canCheckPitch = false;
-    
-    // Aguarda um tempo antes de permitir a detecção do botão pitch
-    // Isso garante que a seção não apareça imediatamente ao carregar a página
-    setTimeout(function() {
-        canCheckPitch = true;
-    }, 3000); // Aguarda 3 segundos após o carregamento da página
-
-    // Função para verificar se o botão "pitch" do vturb apareceu
-    function checkForPitchButton() {
-        // Só verifica se já passou o tempo mínimo
-        if (!canCheckPitch) {
-            return false;
-        }
+    // Função para verificar se um elemento está realmente visível na tela
+    function isElementVisible(element) {
+        if (!element) return false;
         
+        const style = window.getComputedStyle(element);
+        const rect = element.getBoundingClientRect();
+        
+        // Verifica se o elemento está visível:
+        // - display não é 'none'
+        // - visibility não é 'hidden'
+        // - opacity não é 0
+        // - tem dimensões (width e height > 0)
+        return style.display !== 'none' &&
+               style.visibility !== 'hidden' &&
+               parseFloat(style.opacity) > 0 &&
+               rect.width > 0 &&
+               rect.height > 0;
+    }
+
+    // Função para verificar se o botão "pitch" do vturb apareceu E está visível
+    function checkForPitchButton() {
         // Procura por botões que contenham o texto "pitch" (case insensitive)
         const allButtons = document.querySelectorAll('button, a, div[role="button"]');
         
         for (let button of allButtons) {
             const buttonText = button.textContent.toLowerCase().trim();
-            if (buttonText.includes('pitch') && !pitchButtonDetected) {
+            // Verifica se contém "pitch" E se está realmente visível na tela
+            if (buttonText.includes('pitch') && !pitchButtonDetected && isElementVisible(button)) {
                 pitchButtonDetected = true;
-                console.log('Botão pitch detectado! Mostrando ofertas...');
+                console.log('Botão pitch detectado e VISÍVEL! Mostrando ofertas...');
                 showOffers();
                 return true;
             }
