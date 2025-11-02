@@ -397,6 +397,11 @@ body {
     height: 20px;
 }
 
+.action-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .action-btn.active {
     color: #1877f2;
 }
