@@ -1,6 +1,75 @@
 document.addEventListener('DOMContentLoaded', function() {
     // O vídeo agora é gerenciado pelo Vturb player
     const likeBtn = document.getElementById('likeBtn');
+    const offersSection = document.querySelector('.offers-section');
+    let pitchButtonDetected = false;
+
+    // Função para verificar se o botão "pitch" do vturb apareceu
+    function checkForPitchButton() {
+        // Procura por botões que contenham o texto "pitch" (case insensitive)
+        const allButtons = document.querySelectorAll('button, a, div[role="button"]');
+        
+        for (let button of allButtons) {
+            const buttonText = button.textContent.toLowerCase().trim();
+            if (buttonText.includes('pitch') && !pitchButtonDetected) {
+                pitchButtonDetected = true;
+                console.log('Botão pitch detectado! Mostrando ofertas...');
+                showOffers();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Função para mostrar a seção de ofertas
+    function showOffers() {
+        if (offersSection) {
+            offersSection.classList.add('visible');
+        }
+    }
+
+    // Função para ocultar a seção de ofertas
+    function hideOffers() {
+        if (offersSection) {
+            offersSection.classList.remove('visible');
+        }
+    }
+
+    // Verificar periodicamente se o botão pitch apareceu
+    const pitchCheckInterval = setInterval(function() {
+        if (checkForPitchButton()) {
+            clearInterval(pitchCheckInterval); // Para de verificar após encontrar
+        }
+    }, 500); // Verifica a cada 500ms
+
+    // Observador de mutações no DOM para detectar mudanças no vturb player
+    const observer = new MutationObserver(function(mutations) {
+        if (!pitchButtonDetected) {
+            checkForPitchButton();
+        }
+    });
+
+    // Observa mudanças no body e seus filhos
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class', 'style']
+    });
+
+    // Botão de dev para toggle manual
+    const devToggleBtn = document.getElementById('devToggleOffers');
+    if (devToggleBtn) {
+        devToggleBtn.addEventListener('click', function() {
+            if (offersSection.classList.contains('visible')) {
+                hideOffers();
+                console.log('Ofertas ocultadas (dev mode)');
+            } else {
+                showOffers();
+                console.log('Ofertas exibidas (dev mode)');
+            }
+        });
+    }
 
     let likesCount = 12700;
     let userLiked = false;
