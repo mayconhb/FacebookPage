@@ -797,34 +797,6 @@ body {
     }
 }
 
-.dev-toggle-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10000;
-    padding: 10px 20px;
-    background: #1877f2;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    transition: all 0.2s ease;
-}
-
-.dev-toggle-btn:hover {
-    background: #166fe5;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.dev-toggle-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
 @media (max-width: 768px) {
     .offers-section {
         grid-template-columns: 1fr;

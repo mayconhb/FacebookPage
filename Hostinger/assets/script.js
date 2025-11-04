@@ -114,20 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         attributeFilter: ['class', 'style']
     });
 
-    // Botão de dev para toggle manual
-    const devToggleBtn = document.getElementById('devToggleOffers');
-    if (devToggleBtn) {
-        devToggleBtn.addEventListener('click', function() {
-            if (offersSection.classList.contains('visible')) {
-                hideOffers();
-                console.log('Ofertas ocultadas (dev mode)');
-            } else {
-                showOffers();
-                console.log('Ofertas exibidas (dev mode)');
-            }
-        });
-    }
-
     let likesCount = 12700;
     let userLiked = false;
 
