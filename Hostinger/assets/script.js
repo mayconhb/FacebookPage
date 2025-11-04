@@ -17,10 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutesElement = document.getElementById('minutes');
         const secondsElement = document.getElementById('seconds');
         
-        if (!minutesElement || !secondsElement) {
-            console.log('Elementos do contador não encontrados');
-            return;
-        }
+        if (!minutesElement || !secondsElement) return;
 
         const minutes = Math.floor(countdownTime / 60);
         const seconds = countdownTime % 60;
@@ -28,22 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
         minutesElement.textContent = String(minutes).padStart(2, '0');
         secondsElement.textContent = String(seconds).padStart(2, '0');
 
-        console.log('Countdown:', minutes + ':' + String(seconds).padStart(2, '0'), 'Total:', countdownTime);
-
         if (countdownTime > 0) {
             countdownTime--;
         } else {
             clearInterval(countdownInterval);
-            console.log('Countdown finalizado!');
         }
     }
 
     function startCountdown() {
-        if (countdownInterval) {
-            console.log('Limpando intervalo anterior');
-            clearInterval(countdownInterval);
-        }
-        console.log('Iniciando countdown de 15 minutos');
+        if (countdownInterval) clearInterval(countdownInterval);
         countdownTime = 15 * 60;
         updateCountdown();
         countdownInterval = setInterval(updateCountdown, 1000);
