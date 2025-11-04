@@ -35,8 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function startCountdown() {
-        updateCountdown(); // Atualiza imediatamente
-        countdownInterval = setInterval(updateCountdown, 1000); // Atualiza a cada segundo
+        if (countdownInterval) {
+            clearInterval(countdownInterval);
+        }
+        updateCountdown();
+        countdownInterval = setInterval(updateCountdown, 1000);
     }
 
     // Função para verificar se um elemento está realmente visível na tela

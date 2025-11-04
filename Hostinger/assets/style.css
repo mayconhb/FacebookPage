@@ -389,35 +389,97 @@ body {
 .offers-header {
     grid-column: 1 / -1;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .offers-headline {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: 800;
     color: #1c1e21;
     margin: 0 0 8px 0;
     line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .offers-subheadline {
-    font-size: 18px;
-    color: #65676b;
-    margin: 0 0 16px 0;
-    font-weight: 500;
+    font-size: 20px;
+    color: #dc3545;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .countdown-timer {
-    font-size: 32px;
-    font-weight: bold;
-    color: #e4002b;
-    background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
-    border: 2px solid #e4002b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border-radius: 16px;
+    padding: 20px 40px;
+    box-shadow: 0 8px 24px rgba(220, 53, 69, 0.3);
+    animation: countdownPulse 2s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 24px rgba(220, 53, 69, 0.3);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 10px 30px rgba(220, 53, 69, 0.4);
+    }
+}
+
+.timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 20px;
     border-radius: 12px;
-    padding: 16px 32px;
-    display: inline-block;
-    box-shadow: 0 4px 12px rgba(228, 0, 43, 0.15);
-    letter-spacing: 2px;
+    min-width: 80px;
+    backdrop-filter: blur(10px);
+}
+
+.timer-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.timer-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+
+.timer-separator {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin: 0 4px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
 }
 
 .offer-item {
@@ -766,5 +828,68 @@ body {
     
     .offer-image {
         max-width: 400px;
+    }
+    
+    .offers-headline {
+        font-size: 24px;
+    }
+    
+    .offers-subheadline {
+        font-size: 16px;
+    }
+    
+    .countdown-timer {
+        padding: 16px 24px;
+        gap: 8px;
+    }
+    
+    .timer-box {
+        min-width: 60px;
+        padding: 10px 16px;
+    }
+    
+    .timer-number {
+        font-size: 36px;
+    }
+    
+    .timer-separator {
+        font-size: 36px;
+    }
+    
+    .timer-label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offers-headline {
+        font-size: 20px;
+    }
+    
+    .offers-subheadline {
+        font-size: 14px;
+    }
+    
+    .countdown-timer {
+        padding: 12px 20px;
+        gap: 6px;
+    }
+    
+    .timer-box {
+        min-width: 50px;
+        padding: 8px 12px;
+    }
+    
+    .timer-number {
+        font-size: 28px;
+    }
+    
+    .timer-separator {
+        font-size: 28px;
+    }
+    
+    .timer-label {
+        font-size: 9px;
+        margin-top: 4px;
     }
 }
