@@ -14,8 +14,11 @@
     <link rel="preconnect" href="https://enduroxprime.mycartpanda.com" crossorigin>
     
     <!-- Preload CSS crítico -->
-    <link rel="preload" href="assets/style.css?v=20251104c" as="style">
-    <link rel="stylesheet" href="assets/style.css?v=20251104c">
+    <link rel="preload" href="assets/style.css?v=20251104d" as="style">
+    <link rel="stylesheet" href="assets/style.css?v=20251104d">
+    
+    <!-- Preload script do vídeo para carregamento ultra rápido -->
+    <link rel="preload" href="https://scripts.converteai.net/bab2fc8f-ef03-4202-ae7b-2152b5f34ed0/players/690a37f763c4486921be62a9/v4/player.js" as="script" crossorigin="anonymous">
     
     <!-- Preload imagens críticas above the fold -->
     <link rel="preload" href="assets/dr-kaito.webp" as="image">
@@ -70,7 +73,7 @@
                 2. Substitua ambos os IDs (ACCOUNT_ID e VIDEO_ID) na URL do script abaixo
             -->
             <div class="video-container">
-                <vturb-smartplayer id="vid-690a37f763c4486921be62a9" style="display: block; margin: 0 auto; width: 100%;" fetchpriority="high"></vturb-smartplayer>
+                <vturb-smartplayer id="vid-690a37f763c4486921be62a9" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
             </div>
 
             <div class="post-content">
@@ -105,32 +108,32 @@
                     </div>
                     <div class="offer-item">
                         <a href="https://enduroxprime.mycartpanda.com/checkout/190130046:1?afid=IkmLrRm74B">
-                            <img src="assets/offer-6-bottles.webp" alt="6 Bottles - Best Value" class="offer-image">
+                            <img src="assets/offer-6-bottles.webp" alt="6 Bottles - Best Value" class="offer-image" width="400" height="400">
                         </a>
                     </div>
                     <div class="offer-item">
                         <a href="https://enduroxprime.mycartpanda.com/checkout/190130045:1?afid=IkmLrRm74B">
-                            <img src="assets/offer-3-bottles.webp" alt="3 Bottles - Most Popular" class="offer-image">
+                            <img src="assets/offer-3-bottles.webp" alt="3 Bottles - Most Popular" class="offer-image" width="400" height="400">
                         </a>
                     </div>
                     <div class="offer-item">
                         <a href="https://enduroxprime.mycartpanda.com/checkout/190130044:1?afid=IkmLrRm74B">
-                            <img src="assets/offer-2-bottles.png" alt="2 Bottles - Basic" class="offer-image">
+                            <img src="assets/offer-2-bottles.png" alt="2 Bottles - Basic" class="offer-image" width="400" height="400">
                         </a>
                     </div>
                 </div>
 
                 <div class="action-buttons">
                     <button class="action-btn" id="likeBtn">
-                        <img src="assets/like-icon.png" alt="Like" class="action-icon">
+                        <img src="assets/like-icon.png" alt="Like" class="action-icon" width="20" height="20">
                         <span>Like</span>
                     </button>
                     <button class="action-btn" id="commentBtn">
-                        <img src="assets/share-icon.png" alt="Share" class="action-icon">
+                        <img src="assets/share-icon.png" alt="Share" class="action-icon" width="20" height="20">
                         <span>Comment</span>
                     </button>
                     <button class="action-btn" id="shareBtn">
-                        <img src="assets/comment-icon.png" alt="Comment" class="action-icon">
+                        <img src="assets/comment-icon.png" alt="Comment" class="action-icon" width="20" height="20">
                         <span>Share</span>
                     </button>
                 </div>
@@ -139,7 +142,7 @@
                     <h2 class="comments-title">Comments</h2>
                     
                     <div class="comment">
-                        <img src="assets/comment-avatar-1.webp" alt="Michael Johnson" class="comment-avatar">
+                        <img src="assets/comment-avatar-1.webp" alt="Michael Johnson" class="comment-avatar" width="40" height="40">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">Michael Johnson</span>
@@ -150,7 +153,7 @@
                                 <button class="comment-action">Like</button>
                                 <button class="comment-action">Reply</button>
                                 <div class="comment-likes">
-                                    <img src="assets/reactions-1.png" alt="Like">
+                                    <img src="assets/reactions-1.png" alt="Like" width="41" height="16">
                                     <span>2.3K</span>
                                 </div>
                             </div>
@@ -158,7 +161,7 @@
                     </div>
 
                     <div class="comment">
-                        <img src="assets/comment-avatar-2.webp" alt="Sarah Williams" class="comment-avatar">
+                        <img src="assets/comment-avatar-2.webp" alt="Sarah Williams" class="comment-avatar" width="40" height="40">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">Sarah Williams</span>
@@ -169,7 +172,7 @@
                                 <button class="comment-action">Like</button>
                                 <button class="comment-action">Reply</button>
                                 <div class="comment-likes">
-                                    <img src="assets/reactions-2.png" alt="Like">
+                                    <img src="assets/reactions-2.png" alt="Like" width="41" height="16">
                                     <span>1.8K</span>
                                 </div>
                             </div>
@@ -177,7 +180,7 @@
                     </div>
 
                     <div class="comment">
-                        <img src="assets/comment-avatar-3.webp" alt="David Thompson" class="comment-avatar">
+                        <img src="assets/comment-avatar-3.webp" alt="David Thompson" class="comment-avatar" width="40" height="40">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">David Thompson</span>
@@ -188,7 +191,7 @@
                                 <button class="comment-action">Like</button>
                                 <button class="comment-action">Reply</button>
                                 <div class="comment-likes">
-                                    <img src="assets/reactions-3.png" alt="Like">
+                                    <img src="assets/reactions-3.png" alt="Like" width="41" height="16">
                                     <span>3.1K</span>
                                 </div>
                             </div>
@@ -196,7 +199,7 @@
                     </div>
 
                     <div class="comment">
-                        <img src="assets/comment-avatar-4.webp" alt="Jennifer Martinez" class="comment-avatar">
+                        <img src="assets/comment-avatar-4.webp" alt="Jennifer Martinez" class="comment-avatar" width="40" height="40">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">Jennifer Martinez</span>
@@ -207,7 +210,7 @@
                                 <button class="comment-action">Like</button>
                                 <button class="comment-action">Reply</button>
                                 <div class="comment-likes">
-                                    <img src="assets/reactions-4.png" alt="Like">
+                                    <img src="assets/reactions-4.png" alt="Like" width="41" height="16">
                                     <span>987</span>
                                 </div>
                             </div>
@@ -215,7 +218,7 @@
                     </div>
 
                     <div class="comment">
-                        <img src="assets/comment-avatar-5.webp" alt="Robert Davis" class="comment-avatar">
+                        <img src="assets/comment-avatar-5.webp" alt="Robert Davis" class="comment-avatar" width="40" height="40">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">Robert Davis</span>
@@ -244,14 +247,8 @@
     </button>
 
     <!-- Script do Vturb - Carregamento prioritário -->
-    <script>
-        var s=document.createElement("script");
-        s.src="https://scripts.converteai.net/bab2fc8f-ef03-4202-ae7b-2152b5f34ed0/players/690a37f763c4486921be62a9/v4/player.js";
-        s.async=!0;
-        s.fetchPriority="high";
-        document.head.appendChild(s);
-    </script>
+    <script src="https://scripts.converteai.net/bab2fc8f-ef03-4202-ae7b-2152b5f34ed0/players/690a37f763c4486921be62a9/v4/player.js" async crossorigin="anonymous" fetchpriority="high"></script>
 
-    <script src="assets/script.js?v=20251104c" defer></script>
+    <script src="assets/script.js?v=20251104d" defer></script>
 </body>
 </html>
