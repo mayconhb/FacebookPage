@@ -20,21 +20,29 @@ Hostinger/
   - Data "13 de out." com ícone de privacidade (globo)
   - Botões de menu (três pontos) e fechar (X)
 - **Texto do Post**: "99% Failed this mission" em fonte grande
-- **Card de Vídeo**: Player de vídeo com overlay rosa e botão de play com texto "Seu vídeo já começou! Clique para ouvir"
+- **Card de Vídeo**: Player Vturb (vid-690a37f763c4486921be62a9) com carregamento ultra rápido
 - **Título**: "A Descoberta Científica que Está Chocando Médicos e Mulheres..."
+- **Contador Regressivo**: Timer de 15 minutos acima das ofertas com animações e urgência visual
+- **Ofertas de Produto**: 3 imagens de ofertas com links para checkout (6, 3 e 2 garrafas)
 - **Métricas de Engajamento**: 23 mil curtidas, 8742 comentários, 1,2 mil compartilhamentos
 - **Botões de Interação**: Curtir, Comentar, Compartilhar (totalmente funcionais)
 - **Seção de Comentários**: 5 comentários realistas com avatares coloridos, nomes, texto, tempo e curtidas
 - **Rodapé**: Copyright © 2024 Truque da Sai Rosa com links para Política de Privacidade e Termos de Serviço
 - **Design Responsivo**: Layout adaptável para diferentes tamanhos de tela
+- **Performance Otimizada**: Carregamento ultra rápido com preload, fetchpriority, WebP e prevenção de layout shift
 
 ## Funcionalidades Interativas
-1. **Player de Vídeo**: Clique no overlay ou no vídeo para reproduzir/pausar
-2. **Botão Curtir**: Incrementa contador de curtidas e muda cor
-3. **Botão Comentar**: Rola a página até a seção de comentários
-4. **Botão Compartilhar**: Compartilha via API nativa ou copia link
-5. **Curtir Comentários**: Cada comentário pode ser curtido individualmente
-6. **Barra de Progresso**: Mostra progresso da reprodução do vídeo em verde
+1. **Contador Regressivo**: Timer de 15:00 minutos com:
+   - Detecção automática do botão "pitch" do vídeo para iniciar
+   - Animação de pulsação no fundo gradiente vermelho
+   - Separadores piscantes (:) entre minutos e segundos
+   - Persistência do tempo em localStorage para continuidade entre recargas
+2. **Player de Vídeo Vturb**: Carregamento prioritário e ultra rápido
+3. **Botão Curtir**: Incrementa contador de curtidas e muda cor
+4. **Botão Comentar**: Rola a página até a seção de comentários
+5. **Botão Compartilhar**: Compartilha via API nativa ou copia link
+6. **Curtir Comentários**: Cada comentário pode ser curtido individualmente
+7. **Links de Checkout**: 3 ofertas linkadas para mycartpanda.com
 
 ## Tecnologias Utilizadas
 - HTML5 puro
@@ -59,6 +67,21 @@ Para fazer upload na Hostinger:
 02 de Novembro de 2025
 
 ## Mudanças Recentes
+- [04/11/2025] Otimização completa para ultra velocidade de carregamento:
+  - Adicionado preconnect/dns-prefetch para domínios Vturb e CDN
+  - Script do vídeo com fetchpriority="high" e crossorigin para carregamento prioritário
+  - Preload do script do player para início imediato
+  - Conversão de imagens críticas para formato WebP (redução ~60% no tamanho)
+  - Adicionado width/height em todas as imagens para prevenir layout shift
+  - CSS otimizado com containment para performance
+  - Removidos logs de debug para produção
+  - Cache busting implementado (v=20251104d)
+- [03/11/2025] Implementação de contador regressivo de 15 minutos acima das ofertas:
+  - Título "Claim Your Discounted" e subtítulo "Limited-time offer:"
+  - Design com fundo gradiente vermelho e animações de pulsação
+  - Detecção automática do botão pitch para iniciar contagem
+  - Separadores piscantes entre minutos e segundos
+- [03/11/2025] Substituição do vídeo Vturb de vid-68fdd186d4cc9d4913d24d18 para vid-690a37f763c4486921be62a9
 - [02/11/2025] Criação inicial da página com todos os elementos
 - [02/11/2025] Ajuste da proporção do vídeo de 177.78% para 56.25% (16:9)
 - [02/11/2025] Remoção do autoplay automático para manter overlay visível
