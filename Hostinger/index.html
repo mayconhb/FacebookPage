@@ -70,7 +70,7 @@
                 2. Substitua ambos os IDs (ACCOUNT_ID e VIDEO_ID) na URL do script abaixo
             -->
             <div class="video-container">
-                <vturb-smartplayer id="vid-690a37f763c4486921be62a9" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
+                <vturb-smartplayer id="vid-690a37f763c4486921be62a9" style="display: block; margin: 0 auto; width: 100%;" fetchpriority="high"></vturb-smartplayer>
             </div>
 
             <div class="post-content">
@@ -177,7 +177,7 @@
                     </div>
 
                     <div class="comment">
-                        <img src="assets/comment-avatar-3.png" alt="David Thompson" class="comment-avatar">
+                        <img src="assets/comment-avatar-3.webp" alt="David Thompson" class="comment-avatar">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">David Thompson</span>
@@ -196,7 +196,7 @@
                     </div>
 
                     <div class="comment">
-                        <img src="assets/comment-avatar-4.png" alt="Jennifer Martinez" class="comment-avatar">
+                        <img src="assets/comment-avatar-4.webp" alt="Jennifer Martinez" class="comment-avatar">
                         <div class="comment-content">
                             <div class="comment-header">
                                 <span class="comment-author">Jennifer Martinez</span>
@@ -243,14 +243,15 @@
         Toggle Offers (Dev)
     </button>
 
-    <!-- Script do Vturb - Trocar os IDs quando mudar o vídeo -->
-    <script type="text/javascript">
+    <!-- Script do Vturb - Carregamento prioritário -->
+    <script>
         var s=document.createElement("script");
         s.src="https://scripts.converteai.net/bab2fc8f-ef03-4202-ae7b-2152b5f34ed0/players/690a37f763c4486921be62a9/v4/player.js";
         s.async=!0;
+        s.fetchPriority="high";
         document.head.appendChild(s);
     </script>
 
-    <script src="assets/script.js?v=20251104b"></script>
+    <script src="assets/script.js?v=20251104c" defer></script>
 </body>
 </html>
