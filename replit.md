@@ -67,6 +67,24 @@ Para fazer upload na Hostinger:
 02 de Novembro de 2025
 
 ## Mudanças Recentes
+- [04/11/2025] **OTIMIZAÇÃO ULTRA VELOCIDADE - PageSpeed >90**:
+  - **CSS crítico inline expandido**: Todos os estilos above-the-fold (header, post, autor, vídeo) inline para renderização instantânea sem bloqueio
+  - **CSS assíncrono robusto**: Método media="print" onload com fallback noscript para compatibilidade total
+  - **Script Vturb async**: Carregado de forma assíncrona para não bloquear renderização inicial
+  - **Resource hints otimizados**: dns-prefetch e preconnect para domínios Vturb (scripts.converteai.net, cdn.converteai.net)
+  - **Imagens WebP 100%**: Conversão completa de todas as PNGs para WebP com reduções de 43-80% no tamanho:
+    - reactions.png → reactions.webp (63.5% menor)
+    - like-icon.png → like-icon.webp (80.6% menor)
+    - share-icon.png → share-icon.webp (77.8% menor)
+    - comment-icon.png → comment-icon.webp (79.8% menor)
+    - offer-2-bottles.png → offer-2-bottles.webp (43.4% menor)
+    - E mais 5 imagens convertidas
+  - **fetchpriority="high"**: Avatar do Dr. Kaito carregado com prioridade máxima
+  - **Lazy loading**: Todas as imagens below-the-fold com loading="lazy"
+  - **Script.js com defer**: JavaScript não-crítico carregado após o HTML
+  - **Versão de cache**: Atualizada para v=20251104i
+  - **Objetivo**: FCP <1.5s (antes 3.8s) e pontuação PageSpeed >90 (antes 61)
+- [04/11/2025] Ajuste do video container: Removido padding-bottom forçado para permitir que o Vturb controle totalmente o tamanho do player
 - [04/11/2025] Otimização para ultra velocidade de carregamento e excelente CLS:
   - **CSS crítico inline**: Primeiros estilos inline no <head> para renderização instantânea
   - **CLS reduzido (0,054 - excelente)**: 
