@@ -386,6 +386,40 @@ body {
     display: grid;
 }
 
+.offers-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.offers-headline {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1c1e21;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.offers-subheadline {
+    font-size: 18px;
+    color: #65676b;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+}
+
+.countdown-timer {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e4002b;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+    border: 2px solid #e4002b;
+    border-radius: 12px;
+    padding: 16px 32px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(228, 0, 43, 0.15);
+    letter-spacing: 2px;
+}
+
 .offer-item {
     width: 100%;
     display: flex;

@@ -9,6 +9,36 @@ document.addEventListener('DOMContentLoaded', function() {
         offersSection.classList.remove('visible');
     }
 
+    // Countdown Timer - 15 minutos
+    let countdownTime = 15 * 60; // 15 minutos em segundos
+    let countdownInterval;
+
+    function updateCountdown() {
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+        
+        if (!minutesElement || !secondsElement) return;
+
+        const minutes = Math.floor(countdownTime / 60);
+        const seconds = countdownTime % 60;
+
+        minutesElement.textContent = String(minutes).padStart(2, '0');
+        secondsElement.textContent = String(seconds).padStart(2, '0');
+
+        if (countdownTime > 0) {
+            countdownTime--;
+        } else {
+            clearInterval(countdownInterval);
+            // Quando o tempo acabar, você pode adicionar uma ação aqui
+            // Por exemplo: esconder as ofertas ou mostrar mensagem
+        }
+    }
+
+    function startCountdown() {
+        updateCountdown(); // Atualiza imediatamente
+        countdownInterval = setInterval(updateCountdown, 1000); // Atualiza a cada segundo
+    }
+
     // Função para verificar se um elemento está realmente visível na tela
     function isElementVisible(element) {
         if (!element) return false;
@@ -50,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function showOffers() {
         if (offersSection) {
             offersSection.classList.add('visible');
+            // Inicia o contador regressivo quando as ofertas aparecerem
+            startCountdown();
         }
     }
 
