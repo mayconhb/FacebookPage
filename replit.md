@@ -67,6 +67,16 @@ Para fazer upload na Hostinger:
 02 de Novembro de 2025
 
 ## Mudanças Recentes
+- [04/11/2025] Otimizações avançadas para nota máxima no PageSpeed Insights:
+  - **CLS eliminado (de 0,504 para ~0)**: 
+    - Video container com aspect-ratio 16/9 e min-height 281px
+    - Todas as imagens com aspect-ratio definido (1:1 para avatares e ofertas)
+    - Seção de ofertas com espaço reservado (opacity em vez de display/height)
+  - **Lazy loading**: Todas as imagens abaixo da dobra com loading="lazy"
+  - **Font optimization**: Adicionado font-display: swap
+  - **Display block**: Todas as imagens como display: block para evitar espaços
+  - Cache busting implementado (v=20251104f)
+  - Removido botão de desenvolvimento que aparecia em produção
 - [04/11/2025] Otimização completa para ultra velocidade de carregamento:
   - Adicionado preconnect/dns-prefetch para domínios Vturb e CDN
   - Script do vídeo com fetchpriority="high" e crossorigin para carregamento prioritário
@@ -75,7 +85,6 @@ Para fazer upload na Hostinger:
   - Adicionado width/height em todas as imagens para prevenir layout shift
   - CSS otimizado com containment para performance
   - Removidos logs de debug para produção
-  - Cache busting implementado (v=20251104d)
 - [03/11/2025] Implementação de contador regressivo de 15 minutos acima das ofertas:
   - Título "Claim Your Discounted" e subtítulo "Limited-time offer:"
   - Design com fundo gradiente vermelho e animações de pulsação
