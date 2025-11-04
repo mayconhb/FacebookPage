@@ -390,19 +390,15 @@ body {
 }
 
 .offers-section {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     padding: 16px 0;
     border-bottom: 1px solid #e4e6eb;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
 }
 
 .offers-section.visible {
-    opacity: 1;
-    pointer-events: auto;
+    display: grid;
 }
 
 .offers-header {

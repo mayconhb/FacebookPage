@@ -67,15 +67,18 @@ Para fazer upload na Hostinger:
 02 de Novembro de 2025
 
 ## Mudanças Recentes
-- [04/11/2025] Otimizações avançadas para nota máxima no PageSpeed Insights:
-  - **CLS eliminado (de 0,504 para ~0)**: 
+- [04/11/2025] Otimização para ultra velocidade de carregamento e excelente CLS:
+  - **CSS crítico inline**: Primeiros estilos inline no <head> para renderização instantânea
+  - **CLS reduzido (0,054 - excelente)**: 
     - Video container com aspect-ratio 16/9 e min-height 281px
     - Todas as imagens com aspect-ratio definido (1:1 para avatares e ofertas)
-    - Seção de ofertas com espaço reservado (opacity em vez de display/height)
+    - Seção de ofertas volta a display:none (sem espaço em branco) - aparece após botão pitch
   - **Lazy loading**: Todas as imagens abaixo da dobra com loading="lazy"
+  - **Script do vídeo sem async**: Carregamento síncrono para ultra velocidade
   - **Font optimization**: Adicionado font-display: swap
   - **Display block**: Todas as imagens como display: block para evitar espaços
-  - Cache busting implementado (v=20251104f)
+  - **Preconnect otimizado**: Apenas para domínios críticos do vídeo
+  - Cache busting implementado (v=20251104g)
   - Removido botão de desenvolvimento que aparecia em produção
 - [04/11/2025] Otimização completa para ultra velocidade de carregamento:
   - Adicionado preconnect/dns-prefetch para domínios Vturb e CDN
