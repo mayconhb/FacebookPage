@@ -1,15 +1,17 @@
 # Página Estática - Post de Mídia Social
 
 ## Visão Geral
-Página estática HTML/CSS/JS que replica a interface de um post de mídia social com vídeo, métricas de engajamento e seção de comentários. Desenvolvida para hospedagem na Hostinger.
+Página estática HTML/CSS/JS que replica a interface de um post de mídia social com vídeo, métricas de engajamento e seção de comentários. Otimizada para hospedagem na Vercel e outras plataformas.
 
 ## Estrutura do Projeto
 ```
-Hostinger/
-├── index.html          # Página principal
+/
+├── index.html          # Página principal (raiz)
+├── vercel.json         # Configuração da Vercel
 └── assets/
     ├── style.css       # Estilos da página
-    └── script.js       # Funcionalidades interativas
+    ├── script.js       # Funcionalidades interativas
+    └── *.webp          # Imagens otimizadas
 ```
 
 ## Características Principais
@@ -56,9 +58,16 @@ O projeto usa um servidor HTTP Python simples na porta 5000:
 python -m http.server 5000 --directory Hostinger
 ```
 
+## Hospedagem na Vercel
+Para deploy na Vercel via GitHub:
+1. Certifique-se que `index.html` está na raiz do repositório
+2. A pasta `assets/` deve estar no mesmo nível do index.html
+3. O arquivo `vercel.json` já está configurado corretamente
+4. Conecte o repositório à Vercel e o deploy será automático
+
 ## Hospedagem na Hostinger
 Para fazer upload na Hostinger:
-1. Faça upload de todo o conteúdo da pasta `Hostinger/` para o diretório public_html
+1. Faça upload de `index.html` e `assets/` para o diretório public_html
 2. Certifique-se de que o index.html esteja na raiz do public_html
 3. A pasta assets deve estar no mesmo nível que o index.html
 4. Nenhuma configuração adicional é necessária
@@ -67,6 +76,7 @@ Para fazer upload na Hostinger:
 02 de Novembro de 2025
 
 ## Mudanças Recentes
+- [04/12/2025] **CORREÇÃO ESTRUTURA VERCEL**: Arquivos movidos da pasta `Hostinger/` para a raiz do projeto + adicionado `vercel.json` para deploy correto na Vercel
 - [04/11/2025] **OTIMIZAÇÃO ULTRA VELOCIDADE - PageSpeed >90**:
   - **CSS crítico inline expandido**: Todos os estilos above-the-fold (header, post, autor, vídeo) inline para renderização instantânea sem bloqueio
   - **CSS assíncrono robusto**: Método media="print" onload com fallback noscript para compatibilidade total
